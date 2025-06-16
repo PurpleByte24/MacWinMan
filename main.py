@@ -178,12 +178,12 @@ def on_release(key):
     current_keys.discard(key)
 
 # App
-app = rumps.App(MWM)
+app = rumps.App("", icon="icon.pdf")
 
-app.menu["Center Window"] = rumps.MenuItem("Center Window", callback=center_window)
-app.menu["Move Left"] = rumps.MenuItem("Move Left", callback=move_left)
-app.menu["Move Right"] = rumps.MenuItem("Move Right", callback=move_right)
-app.menu["Travel Screens"] = rumps.MenuItem("Travel Screens", callback=travel_screens)
+app.menu["Center Window"] = rumps.MenuItem("⌃⌥↩    Center Window", callback=center_window)
+app.menu["Move Left"] = rumps.MenuItem("⌃⌥←    Move Left", callback=move_left)
+app.menu["Move Right"] = rumps.MenuItem("⌃⌥→    Move Right", callback=move_right)
+app.menu["Travel Screens"] = rumps.MenuItem("⌃⌥⌫    Travel Screens", callback=travel_screens)
 
 # Main
 def main():
@@ -194,3 +194,5 @@ current_keys = set()
 listener = keyboard.Listener(on_press=on_press, on_release=on_release)
 if __name__ == "__main__":
     main()
+
+print(1)

@@ -1,2 +1,6 @@
 .venv
 test.py
+icon.*
+setup.py
+dist/
+build/
