@@ -1,6 +1,6 @@
 .venv
 test.py
-icon.*
-setup.py
+icons/
+icon.iconset/
 dist/
 build/
